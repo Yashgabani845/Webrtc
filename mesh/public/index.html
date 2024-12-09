@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Mesh Network Video Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Chat Mesh Network</h1>
+        
+        <div class="user-controls">
+            <button id="startVideoBtn">Start Video</button>
+            <button id="stopVideoBtn" disabled>Stop Video</button>
+        </div>
+
+        <div class="user-list">
+            <h2>Connected Users</h2>
+            <ul id="connectedUsersList"></ul>
+        </div>
+
+        <div class="videos-container">
+            <div class="local-video">
+                <h3>My Video</h3>
+                <video id="localVideo" autoplay muted></video>
+            </div>
+            <div class="remote-videos" id="remoteVideosContainer"></div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
